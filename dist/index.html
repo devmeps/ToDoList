@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ToDo List</title>
+  <link rel="stylesheet" type="text/css" href="/src/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+  </style>
+</head>
+<body class="dark-mode">
+  <div class="container mx-auto px-4 py-8">
+    <div class="max-w-lg mx-auto">
+      <h1 class="text-3xl text-center mb-8">To-Do List</h1> 
+      <div class="flex items-center">
+        <input type="text" class="flex-grow border border-gray-300 rounded-md py-2 px-4 mr-2" id="taskInput" placeholder="Añadir nueva tarea">
+        <div class="flex">
+          <button class="rounded-md bg-green-500 hover:bg-green-700 text-white p-2" id="addButton" onclick="addTask()">Añadir</button>
+          <div class="ml-4">
+            <button onclick="toggleDarkMode()" class="rounded-md bg-gray-500 hover:bg-gray-700 text-white p-2">Cambiar Modo</button>
+          </div>
+        </div>
+      </div>
+      <button class="mx-auto justify-between rounded-md bg-red-500 hover:bg-red-700 text-white p-2 mt-4" id="clearButton" onclick="clearAllTasks()">Borrar todas</button>
+      <ul id="taskList" class="mt-8">
+        <!-- Aquí se mostrarán las tareas -->
+      </ul>
+    </div>
+  </div>
+
+  <main></main>
+
+  <footer class="text-white text-center bg-blue-500 py-4">
+    By @devmeps - 2023
+  </footer>
+</body>
+<script src="/main.js"></script>
+</html>
